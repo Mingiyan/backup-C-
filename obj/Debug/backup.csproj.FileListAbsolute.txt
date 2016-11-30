@@ -1,0 +1,6 @@
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Debug\backup.exe.config
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Debug\backup.exe
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Debug\backup.pdb
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\obj\Debug\backup.csprojResolveAssemblyReference.cache
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\obj\Debug\backup.exe
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\obj\Debug\backup.pdb

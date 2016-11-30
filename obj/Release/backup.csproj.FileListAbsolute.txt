@@ -1,0 +1,12 @@
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\backup.exe.config
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\backup.exe
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\obj\Release\backup.exe
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\CommandLine.dll
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\CommandLine.xml
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\System.IO.Compression.dll
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\System.IO.Compression.FileSystem.dll
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\System.Shim.dll
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\obj\Release\backup.csprojResolveAssemblyReference.cache
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\DotNetZip.dll
+C:\Users\mdordzhiev\Documents\SharpDevelop Projects\backup\backup\bin\Release\DotNetZip.xml

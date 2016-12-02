@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: mdordzhiev
  * Date: 18.11.2016
@@ -25,40 +25,42 @@ namespace backup
 			{
 			
 				SqlConnection conn = new SqlConnection("Data Source=" + args[0] + "," + args[1] + ";Network Library=DBMSSOCN;User ID=sa;Password=p@ssw0rd");
-            try
-            {
-                //try to connect
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Connection error:{0}",se.Message);
-                return;
-            }
+            		try
+            		{
+                		//try to connect
+               			conn.Open();
+                		Console.WriteLine("Connection successfull");
+            		}
+            		catch (SqlException se)
+            		{
+                		Console.WriteLine("Connection error:{0}",se.Message);
+                		return;
+            		}
  
-               string fileName = String.Format(args[2] + "_{0}", DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+            
+            		string fileName = String.Format(args[2] + "_{0}", DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+       
                
+			SqlCommand cmdBackup = new SqlCommand("BACKUP DATABASE " + args[2] + " TO DISK ='C:\\backupsql\\" + fileName + ".bak';", conn);
+			//send inquiry
+
+			try
+			{
+				cmdBackup.ExecuteNonQuery();
+			}
+			catch 
+			{
+				Console.WriteLine("Error creating backup");
+				return;
+			}
+
+			Console.WriteLine("Backup " + fileName + ".bak created successfully");
+			//close connection
+			conn.Close();
+			conn.Dispose();
                
-               SqlCommand cmdBackup = new SqlCommand("BACKUP DATABASE " + args[2] + " TO DISK ='C:\\backupsql\\" + fileName + ".bak';", conn);
-          	//send inquiry
-           		
-             try
-            {
-                cmdBackup.ExecuteNonQuery();
-            }
-            catch 
-            {
-                Console.WriteLine("Error creating backup");
-                return;
-            }
- 
-                Console.WriteLine("Backup " + fileName + ".bak created successfully");
-          	//close connection
-                conn.Close();
-                conn.Dispose();
-               
-           }
-	}
+              		}
+		}
 	}
 }
 	

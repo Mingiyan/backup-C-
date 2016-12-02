@@ -24,7 +24,7 @@ namespace backup
 			for (int i = 0; i < args.Length - 2; i++)
 			{
 			
-				SqlConnection conn = new SqlConnection("Data Source=" + args[0] + "," + args[1] + ";Network Library=DBMSSOCN;Initial Catalog=kbe;User ID=sa;Password=p@ssw0rd");
+				SqlConnection conn = new SqlConnection("Data Source=" + args[0] + "," + args[1] + ";Network Library=DBMSSOCN;User ID=sa;Password=p@ssw0rd");
             try
             {
                 //try to connect
@@ -36,11 +36,11 @@ namespace backup
                 return;
             }
  
-                
+               string fileName = String.Format(args[2] + "_{0}", DateTime.Now.ToString("yyyyMMdd_HHmmss"));
                
                
-               SqlCommand cmdBackup = new SqlCommand("BACKUP DATABASE " + args[2] + " TO DISK ='C:\\backupsql\\" + args[2] + ".bak';", conn);
-            //send inquiry
+               SqlCommand cmdBackup = new SqlCommand("BACKUP DATABASE " + args[2] + " TO DISK ='C:\\backupsql\\" + fileName + ".bak';", conn);
+          	//send inquiry
            		
              try
             {
@@ -52,13 +52,13 @@ namespace backup
                 return;
             }
  
-                Console.WriteLine("Backup created successfully");
-            //close connection
+                Console.WriteLine("Backup " + fileName + ".bak created successfully");
+          	//close connection
                 conn.Close();
                 conn.Dispose();
                
-               }
-			}
-		}
+           }
 	}
+	}
+}
 	
